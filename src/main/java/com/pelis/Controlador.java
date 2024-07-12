@@ -98,7 +98,7 @@ public class Controlador extends HttpServlet { // Declaración de la clase Contr
             ObjectMapper mapper = new ObjectMapper();  // Crear un objeto ObjectMapper para convertir objetos Java a JSON
             String json = mapper.writeValueAsString(peliculas);  // Convertir la lista de películas a formato JSON
 
-            response.setContentType("application/json");  // Establecer el tipo de contenido de la respuesta como JSON
+            response.setContentType("application/json;charset=UTF-8");  // Establecer el tipo de contenido de la respuesta como JSON
             response.getWriter().write(json);  // Escribir el JSON en el cuerpo de la respuesta HTTP
         } catch (SQLException e) {
             e.printStackTrace();  // Imprimir el error en caso de problemas con la base de datos
